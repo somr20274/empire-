@@ -286,6 +286,7 @@
         "image": "shopify://shop_images/chaussettes-en-maille-paisse-macro-textile.png",
         "image_position": "left",
         "heading": "Une chaleur qui part",
+        "subheading": "",
         "highlight": "de l'intérieur",
         "text": "<p>Si vos pieds restent glacés au bureau, et encore une heure après vous être couchée, ce n'est pas une paire fine qui changera la donne. Ici, l'intérieur est tricoté en bouclette double épaisseur : l'air chaud reste piégé contre la peau, même quand le chauffage est au minimum. Le genre de chaleur qu'on sent dès qu'on les enfile.</p>",
         "quote": "",
@@ -293,7 +294,9 @@
         "check_2": "Toucher ultra-doux",
         "button_label": "",
         "button_link": "",
-        "padding": 40
+        "padding": 40,
+        "background": "",
+        "full_bleed": false
       }
     },
     "feat2": {
@@ -302,6 +305,7 @@
         "image": "shopify://shop_images/chaussette-slouchy-taupe-photo-studio.png",
         "image_position": "right",
         "heading": "Elles restent en place,",
+        "subheading": "",
         "highlight": "sans serrer",
         "text": "<p>Le large revers côtelé tient tout seul sur la cheville, sans élastique qui marque la peau. Il retombe juste ce qu'il faut pour ce look « slouchy » si confortable, et vous ne passerez pas la journée à les remonter.</p>",
         "quote": "",
@@ -309,7 +313,9 @@
         "check_2": "Aucune marque d'élastique",
         "button_label": "",
         "button_link": "",
-        "padding": 40
+        "padding": 40,
+        "background": "",
+        "full_bleed": false
       }
     },
     "feat3": {
@@ -318,6 +324,7 @@
         "image": "shopify://shop_images/enoaa-cinq-teintes.jpg",
         "image_position": "left",
         "heading": "Cinq paires, cinq",
+        "subheading": "",
         "highlight": "teintes d'hiver",
         "text": "<p>Crème, taupe, camel, chocolat et noir : des couleurs douces qui s'accordent avec tout ce que vous avez déjà, du jogging du dimanche aux bottines du lundi. Une paire pour chaque jour de la semaine, et plus aucune excuse pour avoir froid.</p>",
         "quote": "",
@@ -325,7 +332,9 @@
         "check_2": "Teintes assorties",
         "button_label": "",
         "button_link": "",
-        "padding": 40
+        "padding": 40,
+        "background": "",
+        "full_bleed": false
       }
     },
     "comparison": {
@@ -393,6 +402,7 @@
         "image": "shopify://shop_images/bo-te-cadeau-kraft-de-no-l-avec-chaussettes-en-maille.png",
         "image_position": "left",
         "heading": "Le cadeau idéal pour",
+        "subheading": "",
         "highlight": "les pieds frileux",
         "text": "<p>Des chaussettes chaudes, c'est le cadeau qu'on réclame chaque hiver. Un pack, cinq paires neutres, deux tailles simples : impossible de se tromper. Glissez-le sous le sapin ou dans une hotte de Noël.</p>",
         "quote": "« [AVIS CLIENT] »",
@@ -400,7 +410,9 @@
         "check_2": "Tailles faciles",
         "button_label": "",
         "button_link": "",
-        "padding": 40
+        "padding": 40,
+        "background": "",
+        "full_bleed": false
       }
     },
     "faq": {
@@ -604,31 +616,6 @@
         "button_link": "",
         "padding": 40
       }
-    },
-    "morepacks": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "",
-        "products": [],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": false,
-        "products_count": 6,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "subheading": "",
-        "title": "Packs unicolores",
-        "content": "<p>5 paires, toutes dans votre teinte préférée.</p>",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
     }
   },
   "order": [
@@ -641,7 +628,6 @@
     "comparison",
     "gift",
     "faq",
-    "reviews",
-    "morepacks"
+    "reviews"
   ]
 }
