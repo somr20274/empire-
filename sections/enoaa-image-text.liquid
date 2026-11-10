@@ -1,6 +1,6 @@
-<div class="enoaa-section" style="--enoaa-pad: {{ section.settings.padding }}px;">
-  <div class="enoaa-container">
-    <div class="enoaa-feature {% if section.settings.image_position == 'right' %}enoaa-feature--right{% endif %}">
+<div class="enoaa-section{% if section.settings.full_bleed %} enoaa-section--bleed{% endif %}" style="--enoaa-pad: {{ section.settings.padding }}px;{% if section.settings.background != blank %} background: {{ section.settings.background }};{% endif %}">
+  <div class="{% unless section.settings.full_bleed %}enoaa-container{% endunless %}">
+    <div class="enoaa-feature {% if section.settings.image_position == 'right' %}enoaa-feature--right{% endif %}{% if section.settings.full_bleed %} enoaa-feature--bleed{% endif %}">
       <div class="enoaa-feature__media">
         {%- if section.settings.image != blank -%}
           {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(max-width: 749px) 100vw, 50vw', widths: '500,800,1200' }}
@@ -9,6 +9,7 @@
         {%- endif -%}
       </div>
       <div class="enoaa-feature__text">
+        {%- if section.settings.subheading != blank -%}<p class="enoaa-eyebrow">{{ section.settings.subheading | escape }}</p>{%- endif -%}
         <h3 class="h4 enoaa-heading-hl">{{ section.settings.heading }}{% if section.settings.highlight != blank %}<span class="enoaa-pill">{{ section.settings.highlight }}</span>{% endif %}</h3>
         {%- if section.settings.text != blank -%}<div class="rte">{{ section.settings.text }}</div>{%- endif -%}
         {%- if section.settings.quote != blank -%}<p class="enoaa-feature__quote">{{ section.settings.quote }}</p>{%- endif -%}
@@ -30,18 +31,101 @@
 {
   "name": "ENOAA – Image + texte",
   "settings": [
-    { "type": "image_picker", "id": "image", "label": "Image" },
-    { "type": "select", "id": "image_position", "label": "Position de l'image", "options": [ { "value": "left", "label": "Gauche" }, { "value": "right", "label": "Droite" } ], "default": "left" },
-    { "type": "inline_richtext", "id": "heading", "label": "Titre", "default": "La chaleur qui vient" },
-    { "type": "text", "id": "highlight", "label": "Mot mis en avant (pastille rose)", "default": "de l'intérieur" },
-    { "type": "richtext", "id": "text", "label": "Texte", "default": "<p>Décrivez ici le bénéfice principal.</p>" },
-    { "type": "inline_richtext", "id": "quote", "label": "Citation (optionnelle)" },
-    { "type": "text", "id": "check_1", "label": "Point fort 1" },
-    { "type": "text", "id": "check_2", "label": "Point fort 2" },
-    { "type": "text", "id": "button_label", "label": "Texte du bouton (optionnel)" },
-    { "type": "url", "id": "button_link", "label": "Lien du bouton" },
-    { "type": "range", "id": "padding", "label": "Espacement vertical", "min": 0, "max": 120, "step": 4, "default": 48, "unit": "px" }
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Position de l'image",
+      "options": [
+        {
+          "value": "left",
+          "label": "Gauche"
+        },
+        {
+          "value": "right",
+          "label": "Droite"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Titre",
+      "default": "La chaleur qui vient"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Surtitre (petit texte au-dessus du titre)"
+    },
+    {
+      "type": "text",
+      "id": "highlight",
+      "label": "Mot mis en avant (pastille rose)",
+      "default": "de l'intérieur"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texte",
+      "default": "<p>Décrivez ici le bénéfice principal.</p>"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "quote",
+      "label": "Citation (optionnelle)"
+    },
+    {
+      "type": "text",
+      "id": "check_1",
+      "label": "Point fort 1"
+    },
+    {
+      "type": "text",
+      "id": "check_2",
+      "label": "Point fort 2"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texte du bouton (optionnel)"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Lien du bouton"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Espacement vertical",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 48,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Couleur de fond"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_bleed",
+      "label": "Pleine largeur (image collée au bord)",
+      "default": false
+    }
   ],
-  "presets": [ { "name": "ENOAA – Image + texte" } ]
+  "presets": [
+    {
+      "name": "ENOAA – Image + texte"
+    }
+  ]
 }
 {% endschema %}

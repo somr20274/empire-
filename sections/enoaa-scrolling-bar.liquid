@@ -1,0 +1,28 @@
+<div class="enoaa-sbar" style="--enoaa-speed: {{ section.settings.speed }}s; background: {{ section.settings.background }}; color: {{ section.settings.text_color }};">
+  <div class="enoaa-marquee__track">
+    {%- for n in (1..2) -%}
+      <div class="enoaa-sbar__group" {% if n == 2 %}aria-hidden="true"{% endif %}>
+        {%- for i in (1..2) -%}
+          {%- for block in section.blocks -%}
+            <span class="enoaa-sbar__item" {% if n == 1 and i == 1 %}{{ block.shopify_attributes }}{% endif %}>{{ block.settings.text | escape }}</span>
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "ENOAA – Bandeau défilant",
+  "settings": [
+    { "type": "color", "id": "background", "label": "Fond", "default": "#000000" },
+    { "type": "color", "id": "text_color", "label": "Texte", "default": "#ffffff" },
+    { "type": "range", "id": "speed", "label": "Durée d'un défilement (secondes)", "min": 10, "max": 80, "step": 5, "default": 40 }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Message", "settings": [ { "type": "text", "id": "text", "label": "Texte", "default": "Votre message" } ] }
+  ],
+  "presets": [ { "name": "ENOAA – Bandeau défilant", "blocks": [ { "type": "item" }, { "type": "item" }, { "type": "item" } ] } ]
+}
+{% endschema %}

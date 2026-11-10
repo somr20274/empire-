@@ -164,3 +164,19 @@
 .enoaa-rating { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: var(--enoaa-rating-size, 16px); line-height: 1.2; }
 .enoaa-rating .enoaa-stars { font-size: calc(var(--enoaa-rating-size, 16px) * 1.25); letter-spacing: 2px; }
 .enoaa-rating__text { color: var(--enoaa-accent); font-weight: 600; }
+
+/* Bandeau défilant réassurance */
+.enoaa-sbar { overflow: hidden; padding-block: 10px; font-size: 13px; }
+.enoaa-sbar__group { display: flex; align-items: center; gap: 72px; padding-right: 72px; }
+.enoaa-sbar__item { white-space: nowrap; }
+
+/* Image + texte pleine largeur */
+.enoaa-eyebrow { margin: 0; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #333; }
+.enoaa-section--bleed { padding-block: 0 !important; }
+.enoaa-feature--bleed { gap: 0; }
+.enoaa-feature--bleed .enoaa-feature__media { border-radius: 0; aspect-ratio: auto; min-height: 460px; }
+.enoaa-feature--bleed .enoaa-feature__text { padding: 56px clamp(20px, 6vw, 96px); max-width: 600px; justify-self: center; }
+@media (max-width: 749px) {
+  .enoaa-feature--bleed .enoaa-feature__media { min-height: 320px; }
+  .enoaa-feature--bleed .enoaa-feature__text { padding: 32px 16px 40px; }
+}
