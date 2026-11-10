@@ -52,7 +52,7 @@ Supported variables
         endif
       %}
 
-      <fieldset class="variant-picker__option">
+      <fieldset class="variant-picker__option" data-option-name="{{ option.name | escape }}">
         <div class="variant-picker__option-info">
           <div class="h-stack gap-2">
             <legend class="text-subdued">{{ option.name }}:</legend>

@@ -15,38 +15,12 @@
         "title": {
           "type": "title",
           "settings": {
-            "heading_tag": "h2"
+            "heading_tag": "h3"
           }
         },
         "badges": {
           "type": "badges",
           "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "rating": {
-          "type": "rating",
-          "settings": {
-            "show_empty": false
-          }
-        },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false
-          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -59,33 +33,120 @@
             "size_chart_page": ""
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_payment_button": false,
             "show_gift_card_recipient": true,
-            "atc_button_background": "",
-            "atc_button_text_color": "",
+            "atc_button_background": "#000000",
+            "atc_button_text_color": "#ffffff",
             "payment_button_background": "",
             "payment_button_text_color": ""
+          }
+        },
+        "enoaa_intro": {
+          "type": "enoaa_intro",
+          "settings": {
+            "pill": "MEILLEURE VENTE",
+            "headline": "Des chaussettes en maille épaisse, pensées pour les pieds toujours gelés",
+            "proof": "<strong>Camille</strong> et [CHIFFRE] clientes les ont adoptées",
+            "rating_text": "[NOTE] | [CHIFFRE] avis vérifiés"
+          }
+        },
+        "enoaa_benefits": {
+          "type": "enoaa_benefits",
+          "settings": {
+            "benefit_1": "Bien plus chaudes qu'elles n'en ont l'air",
+            "benefit_2": "Tiennent en place toutes seules, sans comprimer",
+            "benefit_3": "Si confortables qu'on oublie qu'on les porte",
+            "benefit_4": "Deux tailles : du 35 au 38 ou du 39 au 42"
+          }
+        },
+        "enoaa_bundle": {
+          "type": "enoaa_bundle",
+          "settings": {
+            "option_name": "Offre",
+            "label_1": "5 paires",
+            "pairs_1": 5,
+            "sub_1": "",
+            "tag_1": "",
+            "label_2": "5 achetées = 5 offertes",
+            "pairs_2": 10,
+            "sub_2": "",
+            "tag_2": "Offre Black Friday",
+            "label_3": "",
+            "pairs_3": 0,
+            "sub_3": "",
+            "tag_3": ""
+          }
+        },
+        "enoaa_shipping": {
+          "type": "enoaa_shipping",
+          "settings": {
+            "ship_label": "Expédiée le",
+            "prep_days": 1,
+            "right_text": "Livraison suivie en France"
+          }
+        },
+        "enoaa_guarantee": {
+          "type": "enoaa_guarantee",
+          "settings": {
+            "seal_text": "100 %",
+            "title": "Garantie satisfaite ou remboursée 30 jours",
+            "text": "<p>Portez-les, lavez-les, vivez dedans. Si elles vous déçoivent, on vous les échange ou on vous rembourse, sans justification.</p>"
+          }
+        },
+        "acc_contenu": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Ce que contient le colis",
+            "content": "<p>5 paires de chaussettes ENOAA en maille épaisse, dans les teintes de votre pack, livrées dans une pochette prête à offrir.</p>"
+          }
+        },
+        "acc_garantie": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Garantie satisfaite ou remboursée 30 jours",
+            "content": "<p>Vous avez 30 jours pour les essayer chez vous. Si elles ne vous conviennent pas, écrivez-nous : on vous propose un échange ou un remboursement. Votre droit de rétractation légal de 14 jours s'applique en plus.</p>"
+          }
+        },
+        "acc_livraison": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Livraison et retours",
+            "content": "<p>Commande préparée sous 24 h ouvrées, livraison suivie en France métropolitaine en [DÉLAI] jours ouvrés. Livraison offerte dès [MONTANT] €.</p><p>Retours simples : contactez-nous, on vous envoie l'étiquette.</p>"
+          }
+        },
+        "acc_taille": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Guide des tailles",
+            "content": "<p><strong>Taille S/M</strong> : du 35 au 38<br><strong>Taille L/XL</strong> : du 39 au 42</p><p>Entre deux tailles ? Prenez la plus grande pour un effet plus « slouchy ».</p>"
+          }
+        },
+        "acc_matiere": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Matière et entretien",
+            "content": "<p>[COMPOSITION, ex. 70 % coton, 25 % polyester, 5 % élasthanne]. Intérieur bouclette double épaisseur.</p><p>Lavage en machine à 30 °C, à l'envers. Pas de sèche-linge pour garder leur gonflant.</p>"
           }
         }
       },
       "block_order": [
-        "title",
         "badges",
-        "price",
-        "rating",
-        "payment_terms",
-        "separator",
-        "description",
+        "enoaa_intro",
+        "title",
+        "enoaa_benefits",
+        "enoaa_bundle",
         "variant_picker",
-        "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "enoaa_shipping",
+        "enoaa_guarantee",
+        "acc_contenu",
+        "acc_garantie",
+        "acc_livraison",
+        "acc_taille",
+        "acc_matiere"
       ],
       "settings": {
         "full_width": true,
@@ -105,31 +166,440 @@
         "input_text_color": ""
       }
     },
-    "related-products": {
-      "type": "related-products",
+    "press": {
+      "type": "enoaa-press-marquee",
+      "blocks": {
+        "l1": {
+          "type": "logo",
+          "settings": {
+            "text": "[LOGO PRESSE]"
+          }
+        },
+        "l2": {
+          "type": "logo",
+          "settings": {
+            "text": "[LOGO PRESSE]"
+          }
+        },
+        "l3": {
+          "type": "logo",
+          "settings": {
+            "text": "[LOGO PRESSE]"
+          }
+        },
+        "l4": {
+          "type": "logo",
+          "settings": {
+            "text": "[LOGO PRESSE]"
+          }
+        },
+        "l5": {
+          "type": "logo",
+          "settings": {
+            "text": "[LOGO PRESSE]"
+          }
+        }
+      },
+      "block_order": [
+        "l1",
+        "l2",
+        "l3",
+        "l4",
+        "l5"
+      ],
       "settings": {
-        "recommendations_count": 6,
+        "speed": 35
+      }
+    },
+    "testimonials": {
+      "type": "enoaa-testimonials",
+      "settings": {
+        "title": "Ce qu'en disent les frileuses",
+        "padding": 48
+      },
+      "blocks": {
+        "t1": {
+          "type": "review",
+          "settings": {
+            "name": "[PRÉNOM], [ÂGE]",
+            "verified": true,
+            "text": "<p>[AVIS CLIENT]</p>"
+          }
+        },
+        "t2": {
+          "type": "review",
+          "settings": {
+            "name": "[PRÉNOM], [ÂGE]",
+            "verified": true,
+            "text": "<p>[AVIS CLIENT]</p>"
+          }
+        },
+        "t3": {
+          "type": "review",
+          "settings": {
+            "name": "[PRÉNOM], [ÂGE]",
+            "verified": true,
+            "text": "<p>[AVIS CLIENT]</p>"
+          }
+        },
+        "t4": {
+          "type": "review",
+          "settings": {
+            "name": "[PRÉNOM], [ÂGE]",
+            "verified": true,
+            "text": "<p>[AVIS CLIENT]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ]
+    },
+    "feat1": {
+      "type": "enoaa-image-text",
+      "settings": {
+        "image_position": "left",
+        "heading": "Une chaleur qui part",
+        "highlight": "de l'intérieur",
+        "text": "<p>Si vos pieds restent glacés au bureau, et encore une heure après vous être couchée, ce n'est pas une paire fine qui changera la donne. Ici, l'intérieur est tricoté en bouclette double épaisseur : l'air chaud reste piégé contre la peau, même quand le chauffage est au minimum. Le genre de chaleur qu'on sent dès qu'on les enfile.</p>",
+        "quote": "",
+        "check_1": "Intérieur double épaisseur",
+        "check_2": "Toucher ultra-doux",
+        "button_label": "",
+        "padding": 40
+      }
+    },
+    "feat2": {
+      "type": "enoaa-image-text",
+      "settings": {
+        "image_position": "right",
+        "heading": "Elles restent en place,",
+        "highlight": "sans serrer",
+        "text": "<p>Le large revers côtelé tient tout seul sur la cheville, sans élastique qui marque la peau. Il retombe juste ce qu'il faut pour ce look « slouchy » si confortable, et vous ne passerez pas la journée à les remonter.</p>",
+        "quote": "",
+        "check_1": "Revers côtelé souple",
+        "check_2": "Aucune marque d'élastique",
+        "button_label": "",
+        "padding": 40
+      }
+    },
+    "feat3": {
+      "type": "enoaa-image-text",
+      "settings": {
+        "image_position": "left",
+        "heading": "Cinq paires, cinq",
+        "highlight": "teintes d'hiver",
+        "text": "<p>Crème, taupe, camel, chocolat et noir : des couleurs douces qui s'accordent avec tout ce que vous avez déjà, du jogging du dimanche aux bottines du lundi. Une paire pour chaque jour de la semaine, et plus aucune excuse pour avoir froid.</p>",
+        "quote": "",
+        "check_1": "5 paires par pack",
+        "check_2": "Teintes assorties",
+        "button_label": "",
+        "padding": 40
+      }
+    },
+    "comparison": {
+      "type": "enoaa-comparison",
+      "settings": {
+        "title": "",
+        "brand_name": "ENOAA",
+        "other_name": "Chaussettes polaires classiques",
+        "padding": 48
+      },
+      "blocks": {
+        "r1": {
+          "type": "row",
+          "settings": {
+            "label": "Chaleur",
+            "brand_text": "Bouclette double épaisseur, chaude toute la journée",
+            "other_text": "Polaire fine, froide dès midi"
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "label": "Après lavage",
+            "brand_text": "Maille dense qui garde sa forme",
+            "other_text": "Bouloche et s'aplatit en quelques lavages"
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "label": "Cheville",
+            "brand_text": "Revers souple, aucune marque",
+            "other_text": "Élastique serré qui comprime"
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "label": "Tailles",
+            "brand_text": "Deux tailles, du 35 au 42",
+            "other_text": "Taille unique qui tombe ou serre"
+          }
+        },
+        "r5": {
+          "type": "row",
+          "settings": {
+            "label": "Démangeaisons",
+            "brand_text": "Douce sur la peau, zéro grattage",
+            "other_text": "Fibres qui grattent à la longue"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ]
+    },
+    "gift": {
+      "type": "enoaa-image-text",
+      "settings": {
+        "image_position": "left",
+        "heading": "Le cadeau idéal pour",
+        "highlight": "les pieds frileux",
+        "text": "<p>Des chaussettes chaudes, c'est le cadeau qu'on réclame chaque hiver. Un pack, cinq paires neutres, deux tailles simples : impossible de se tromper. Glissez-le sous le sapin ou dans une hotte de Noël.</p>",
+        "quote": "« [AVIS CLIENT] »",
+        "check_1": "Prêt à offrir",
+        "check_2": "Tailles faciles",
+        "button_label": "",
+        "padding": 40
+      }
+    },
+    "faq": {
+      "type": "enoaa-faq",
+      "settings": {
+        "title": "Questions fréquentes",
+        "padding": 48
+      },
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "Quand vais-je recevoir ma commande ?",
+            "answer": "<p>Votre colis est préparé sous 24 h ouvrées puis livré en [DÉLAI] jours ouvrés en France métropolitaine. Vous recevez un lien de suivi par e-mail dès l'expédition.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Y a-t-il des frais de douane ?",
+            "answer": "<p>Non. Le prix affiché est le prix final, TVA incluse, sans aucun frais supplémentaire à la livraison.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Livrez-vous en Belgique, en Suisse et au Luxembourg ?",
+            "answer": "<p>[À COMPLÉTER selon vos zones de livraison.]</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "J'ai déjà acheté des chaussettes de ce genre et j'ai été déçue. Pourquoi celles-ci ?",
+            "answer": "<p>La plupart des chaussettes « douillettes » sont en polaire fine qui s'aplatit au premier lavage. Les nôtres ont un intérieur en bouclette double épaisseur et une maille dense : elles restent épaisses et chaudes, lavage après lavage.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "Combien de paires contient un pack ?",
+            "answer": "<p>5 paires. Avec l'offre en cours, vous en recevez 10 pour le prix de 5.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "question": "Quelle taille choisir ?",
+            "answer": "<p>S/M pour une pointure du 35 au 38, L/XL du 39 au 42. Entre deux tailles, prenez la plus grande.</p>"
+          }
+        },
+        "q7": {
+          "type": "question",
+          "settings": {
+            "question": "Jusqu'où montent-elles ?",
+            "answer": "<p>Au-dessus de la cheville, avec un revers que vous pouvez porter déroulé ou retombant.</p>"
+          }
+        },
+        "q8": {
+          "type": "question",
+          "settings": {
+            "question": "Sont-elles épaisses au point de ne pas rentrer dans mes chaussures ?",
+            "answer": "<p>Elles sont pensées pour la maison, les baskets et les bottines. Dans des chaussures très ajustées, elles peuvent être un peu justes.</p>"
+          }
+        },
+        "q9": {
+          "type": "question",
+          "settings": {
+            "question": "Est-ce qu'elles grattent ?",
+            "answer": "<p>Non, l'intérieur est doux et lisse contre la peau, même pour les peaux sensibles.</p>"
+          }
+        },
+        "q10": {
+          "type": "question",
+          "settings": {
+            "question": "Rétrécissent-elles au lavage ?",
+            "answer": "<p>Non, si vous les lavez à 30 °C et évitez le sèche-linge.</p>"
+          }
+        },
+        "q11": {
+          "type": "question",
+          "settings": {
+            "question": "Est-ce qu'elles bouloches ?",
+            "answer": "<p>Leur maille dense limite fortement le boulochage. Laver à l'envers les garde comme neuves plus longtemps.</p>"
+          }
+        },
+        "q12": {
+          "type": "question",
+          "settings": {
+            "question": "Glissent-elles sur le parquet ?",
+            "answer": "<p>[À COMPLÉTER : semelle antidérapante ou non.]</p>"
+          }
+        },
+        "q13": {
+          "type": "question",
+          "settings": {
+            "question": "Font-elles transpirer ?",
+            "answer": "<p>Non, la maille respire : vos pieds restent au chaud sans être moites.</p>"
+          }
+        },
+        "q14": {
+          "type": "question",
+          "settings": {
+            "question": "Puis-je les offrir ?",
+            "answer": "<p>Bien sûr. Elles arrivent dans une pochette soignée, et l'échange est simple si la taille ne convient pas.</p>"
+          }
+        },
+        "q15": {
+          "type": "question",
+          "settings": {
+            "question": "Comment les laver ?",
+            "answer": "<p>En machine à 30 °C, à l'envers, sans sèche-linge.</p>"
+          }
+        },
+        "q16": {
+          "type": "question",
+          "settings": {
+            "question": "Puis-je retourner ou échanger ma commande ?",
+            "answer": "<p>Oui. Vous disposez de 14 jours de rétractation, et de notre garantie satisfaite ou remboursée de 30 jours.</p>"
+          }
+        },
+        "q17": {
+          "type": "question",
+          "settings": {
+            "question": "Le paiement est-il sécurisé ?",
+            "answer": "<p>Oui : carte bancaire, Apple Pay, Google Pay et PayPal, via une connexion chiffrée. Nous ne voyons jamais vos données bancaires.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17"
+      ]
+    },
+    "reviews": {
+      "type": "enoaa-reviews",
+      "settings": {
+        "title": "Avis clients",
+        "score_text": "[NOTE] sur 5 · [CHIFFRE] avis",
+        "button_label": "Écrire un avis",
+        "padding": 40
+      },
+      "blocks": {
+        "rv1": {
+          "type": "review",
+          "settings": {
+            "name": "[PRÉNOM]",
+            "date": "[JJ/MM/AAAA]",
+            "title": "",
+            "text": "<p>[AVIS CLIENT]</p>"
+          }
+        },
+        "rv2": {
+          "type": "review",
+          "settings": {
+            "name": "[PRÉNOM]",
+            "date": "[JJ/MM/AAAA]",
+            "title": "",
+            "text": "<p>[AVIS CLIENT]</p>"
+          }
+        },
+        "rv3": {
+          "type": "review",
+          "settings": {
+            "name": "[PRÉNOM]",
+            "date": "[JJ/MM/AAAA]",
+            "title": "",
+            "text": "<p>[AVIS CLIENT]</p>"
+          }
+        },
+        "rv4": {
+          "type": "review",
+          "settings": {
+            "name": "[PRÉNOM]",
+            "date": "[JJ/MM/AAAA]",
+            "title": "",
+            "text": "<p>[AVIS CLIENT]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "rv1",
+        "rv2",
+        "rv3",
+        "rv4"
+      ]
+    },
+    "morepacks": {
+      "type": "featured-collection",
+      "settings": {
         "products": [],
         "full_width": true,
-        "stack_products": true,
+        "stack_products": false,
         "show_progress_bar": false,
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 3,
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
         "subheading": "",
-        "title": "You may also like",
-        "content": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
+        "title": "Packs unicolores",
+        "content": "<p>5 paires, toutes dans votre teinte préférée.</p>",
+        "link_text": ""
       }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "press",
+    "testimonials",
+    "feat1",
+    "feat2",
+    "feat3",
+    "comparison",
+    "gift",
+    "faq",
+    "reviews",
+    "morepacks"
   ]
 }

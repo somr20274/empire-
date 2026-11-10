@@ -1,0 +1,52 @@
+<div class="enoaa-section" style="--enoaa-pad: {{ section.settings.padding }}px;">
+  <div class="enoaa-container">
+    {%- if section.settings.title != blank -%}<h2 class="enoaa-h2 h4">{{ section.settings.title }}</h2>{%- endif -%}
+    <div class="enoaa-compare">
+      <div class="enoaa-compare__media">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(max-width: 749px) 100vw, 33vw' }}
+        {%- else -%}
+          {{ 'product-apparel-2' | placeholder_svg_tag }}
+        {%- endif -%}
+      </div>
+      <div class="enoaa-compare__table" role="table">
+        <div class="enoaa-compare__head" role="columnheader"></div>
+        <div class="enoaa-compare__head enoaa-compare__head--brand" role="columnheader">
+          {%- if section.settings.brand_logo != blank -%}{{ section.settings.brand_logo | image_url: height: 60 | image_tag }}{%- else -%}{{ section.settings.brand_name | escape }}{%- endif -%}
+        </div>
+        <div class="enoaa-compare__head" role="columnheader">{{ section.settings.other_name | escape }}</div>
+        {%- for block in section.blocks -%}
+          <div class="enoaa-compare__cell enoaa-compare__cell--label" role="rowheader" {{ block.shopify_attributes }}>{{ block.settings.label | escape }}</div>
+          <div class="enoaa-compare__cell enoaa-compare__cell--brand" role="cell"><span class="enoaa-dot enoaa-dot--yes">✓</span>{{ block.settings.brand_text }}</div>
+          <div class="enoaa-compare__cell enoaa-compare__cell--other" role="cell"><span class="enoaa-dot enoaa-dot--no">✕</span>{{ block.settings.other_text }}</div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "ENOAA – Comparatif",
+  "settings": [
+    { "type": "inline_richtext", "id": "title", "label": "Titre (optionnel)" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "image_picker", "id": "brand_logo", "label": "Logo de la marque" },
+    { "type": "text", "id": "brand_name", "label": "Nom de la marque (si pas de logo)", "default": "ENOAA" },
+    { "type": "text", "id": "other_name", "label": "Nom de la colonne concurrente", "default": "Chaussettes polaires classiques" },
+    { "type": "range", "id": "padding", "label": "Espacement vertical", "min": 0, "max": 120, "step": 4, "default": 48, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Ligne",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Critère", "default": "Chaleur" },
+        { "type": "inline_richtext", "id": "brand_text", "label": "Votre marque", "default": "Intérieur bouclette double épaisseur" },
+        { "type": "inline_richtext", "id": "other_text", "label": "Concurrent", "default": "Polaire fine qui refroidit vite" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "ENOAA – Comparatif", "blocks": [ { "type": "row" }, { "type": "row" }, { "type": "row" } ] } ]
+}
+{% endschema %}

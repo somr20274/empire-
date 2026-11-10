@@ -1100,6 +1100,214 @@ quick buy information in a template, that will be extracted in JS, but ensure it
           "default": "start"
         }
       ]
+    },
+    {
+      "type": "enoaa_intro",
+      "name": "ENOAA – Accroche",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "pill",
+          "label": "Pastille",
+          "default": "MEILLEURE VENTE"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "headline",
+          "label": "Accroche",
+          "default": "Les chaussettes en maille épaisse pour celles qui ont toujours froid aux pieds"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Photo cliente (avatar)"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "proof",
+          "label": "Preuve sociale",
+          "default": "<strong>Camille</strong> et [CHIFFRE] clientes les ont adoptées"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "rating_text",
+          "label": "Texte de note",
+          "default": "[NOTE] | [CHIFFRE] avis vérifiés"
+        }
+      ]
+    },
+    {
+      "type": "enoaa_benefits",
+      "name": "ENOAA – Bénéfices",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "benefit_1",
+          "label": "Bénéfice 1",
+          "default": "Bien plus chaudes qu'elles n'en ont l'air"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "benefit_2",
+          "label": "Bénéfice 2",
+          "default": "Restent en place toutes seules, sans serrer"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "benefit_3",
+          "label": "Bénéfice 3",
+          "default": "Si douces qu'on oublie qu'on les porte"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "benefit_4",
+          "label": "Bénéfice 4",
+          "default": "Deux tailles : du 35 au 38 ou du 39 au 42"
+        }
+      ]
+    },
+    {
+      "type": "enoaa_bundle",
+      "name": "ENOAA – Offres (packs)",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Affiche les valeurs d'une option produit (ex. « Offre ») sous forme de cartes. Le prix de chaque carte vient de la variante."
+        },
+        {
+          "type": "text",
+          "id": "option_name",
+          "label": "Nom de l'option produit",
+          "default": "Offre"
+        },
+        {
+          "type": "text",
+          "id": "label_1",
+          "label": "Carte 1 – titre",
+          "default": "5 paires"
+        },
+        {
+          "type": "number",
+          "id": "pairs_1",
+          "label": "Carte 1 – nombre de paires (prix/paire)",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "sub_1",
+          "label": "Carte 1 – sous-titre (si pas de prix/paire)"
+        },
+        {
+          "type": "text",
+          "id": "tag_1",
+          "label": "Carte 1 – étiquette"
+        },
+        {
+          "type": "text",
+          "id": "label_2",
+          "label": "Carte 2 – titre",
+          "default": "5 achetées = 5 offertes"
+        },
+        {
+          "type": "number",
+          "id": "pairs_2",
+          "label": "Carte 2 – nombre de paires",
+          "default": 10
+        },
+        {
+          "type": "text",
+          "id": "sub_2",
+          "label": "Carte 2 – sous-titre"
+        },
+        {
+          "type": "text",
+          "id": "tag_2",
+          "label": "Carte 2 – étiquette",
+          "default": "Offre Black Friday"
+        },
+        {
+          "type": "text",
+          "id": "label_3",
+          "label": "Carte 3 – titre"
+        },
+        {
+          "type": "number",
+          "id": "pairs_3",
+          "label": "Carte 3 – nombre de paires",
+          "default": 0
+        },
+        {
+          "type": "text",
+          "id": "sub_3",
+          "label": "Carte 3 – sous-titre"
+        },
+        {
+          "type": "text",
+          "id": "tag_3",
+          "label": "Carte 3 – étiquette"
+        }
+      ]
+    },
+    {
+      "type": "enoaa_shipping",
+      "name": "ENOAA – Date d'expédition",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "ship_label",
+          "label": "Texte avant la date",
+          "default": "Expédiée le"
+        },
+        {
+          "type": "range",
+          "id": "prep_days",
+          "label": "Jours de préparation",
+          "min": 0,
+          "max": 7,
+          "step": 1,
+          "default": 1
+        },
+        {
+          "type": "text",
+          "id": "right_text",
+          "label": "Texte à droite",
+          "default": "Livraison suivie en France"
+        }
+      ]
+    },
+    {
+      "type": "enoaa_guarantee",
+      "name": "ENOAA – Garantie",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "seal_image",
+          "label": "Badge (image)"
+        },
+        {
+          "type": "text",
+          "id": "seal_text",
+          "label": "Texte du badge (si pas d'image)",
+          "default": "100 %"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre",
+          "default": "Garantie satisfaite ou remboursée 30 jours"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Texte",
+          "default": "<p>Portez-les, lavez-les, vivez dedans. Si elles ne vous plaisent pas, on vous les échange ou on vous rembourse. Sans justification.</p>"
+        }
+      ]
     }
   ],
   "settings": [
@@ -1158,7 +1366,7 @@ quick buy information in a template, that will be extracted in JS, but ensure it
       "default": "carousel_thumbnails_left"
     },
     {
-      "type":"select",
+      "type": "select",
       "id": "mobile_media_size",
       "label": "Mobile media size",
       "options": [

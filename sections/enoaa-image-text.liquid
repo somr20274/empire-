@@ -1,0 +1,47 @@
+<div class="enoaa-section" style="--enoaa-pad: {{ section.settings.padding }}px;">
+  <div class="enoaa-container">
+    <div class="enoaa-feature {% if section.settings.image_position == 'right' %}enoaa-feature--right{% endif %}">
+      <div class="enoaa-feature__media">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(max-width: 749px) 100vw, 50vw', widths: '500,800,1200' }}
+        {%- else -%}
+          {{ 'product-apparel-1' | placeholder_svg_tag }}
+        {%- endif -%}
+      </div>
+      <div class="enoaa-feature__text">
+        <h3 class="h4 enoaa-heading-hl">{{ section.settings.heading }}{% if section.settings.highlight != blank %}<span class="enoaa-pill">{{ section.settings.highlight }}</span>{% endif %}</h3>
+        {%- if section.settings.text != blank -%}<div class="rte">{{ section.settings.text }}</div>{%- endif -%}
+        {%- if section.settings.quote != blank -%}<p class="enoaa-feature__quote">{{ section.settings.quote }}</p>{%- endif -%}
+        {%- if section.settings.check_1 != blank or section.settings.check_2 != blank -%}
+          <div class="enoaa-checks">
+            {%- if section.settings.check_1 != blank -%}<span>{{ section.settings.check_1 }}</span>{%- endif -%}
+            {%- if section.settings.check_2 != blank -%}<span>{{ section.settings.check_2 }}</span>{%- endif -%}
+          </div>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank -%}
+          <div><a href="{{ section.settings.button_link | default: '#' }}" class="button">{{ section.settings.button_label | escape }}</a></div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "ENOAA – Image + texte",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "select", "id": "image_position", "label": "Position de l'image", "options": [ { "value": "left", "label": "Gauche" }, { "value": "right", "label": "Droite" } ], "default": "left" },
+    { "type": "inline_richtext", "id": "heading", "label": "Titre", "default": "La chaleur qui vient" },
+    { "type": "text", "id": "highlight", "label": "Mot mis en avant (pastille rose)", "default": "de l'intérieur" },
+    { "type": "richtext", "id": "text", "label": "Texte", "default": "<p>Décrivez ici le bénéfice principal.</p>" },
+    { "type": "inline_richtext", "id": "quote", "label": "Citation (optionnelle)" },
+    { "type": "text", "id": "check_1", "label": "Point fort 1" },
+    { "type": "text", "id": "check_2", "label": "Point fort 2" },
+    { "type": "text", "id": "button_label", "label": "Texte du bouton (optionnel)" },
+    { "type": "url", "id": "button_link", "label": "Lien du bouton" },
+    { "type": "range", "id": "padding", "label": "Espacement vertical", "min": 0, "max": 120, "step": 4, "default": 48, "unit": "px" }
+  ],
+  "presets": [ { "name": "ENOAA – Image + texte" } ]
+}
+{% endschema %}

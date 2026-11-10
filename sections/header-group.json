@@ -14,16 +14,40 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "message": {
+        "m1": {
           "type": "message",
           "settings": {
-            "text": "Announce something here",
+            "text": "Offre Black Friday : 5 paires achetées = 5 offertes",
+            "url": ""
+          }
+        },
+        "m2": {
+          "type": "message",
+          "settings": {
+            "text": "Garantie satisfaite ou remboursée 30 jours",
+            "url": ""
+          }
+        },
+        "m3": {
+          "type": "message",
+          "settings": {
+            "text": "Livraison suivie en France",
+            "url": ""
+          }
+        },
+        "m4": {
+          "type": "message",
+          "settings": {
+            "text": "Paiement 100 % sécurisé",
             "url": ""
           }
         }
       },
       "block_order": [
-        "message"
+        "m1",
+        "m2",
+        "m3",
+        "m4"
       ],
       "settings": {
         "enable_sticky": false,
@@ -32,7 +56,7 @@
         "text_size": "text-xs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#14234B",
+        "background": "#000000",
         "background_gradient": "",
         "text_color": "#ffffff"
       }

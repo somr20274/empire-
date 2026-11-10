@@ -1,0 +1,40 @@
+<div class="enoaa-section" style="--enoaa-pad: {{ section.settings.padding }}px;">
+  <div class="enoaa-container">
+    {%- if section.settings.title != blank -%}<h2 class="enoaa-h2 h4">{{ section.settings.title }}</h2>{%- endif -%}
+    <div class="enoaa-faq">
+      {%- for block in section.blocks -%}
+        <details {{ block.shopify_attributes }}>
+          <summary>{{ block.settings.question | escape }}</summary>
+          <div class="enoaa-faq__answer">{{ block.settings.answer }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{%- if section.blocks.size > 0 -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- for block in section.blocks -%}{"@type":"Question","name":{{ block.settings.question | json }},"acceptedAnswer":{"@type":"Answer","text":{{ block.settings.answer | strip_html | json }}}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "ENOAA – FAQ 2 colonnes",
+  "settings": [
+    { "type": "inline_richtext", "id": "title", "label": "Titre", "default": "Questions fréquentes" },
+    { "type": "range", "id": "padding", "label": "Espacement vertical", "min": 0, "max": 120, "step": 4, "default": 48, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "Votre question ?" },
+        { "type": "richtext", "id": "answer", "label": "Réponse", "default": "<p>Votre réponse.</p>" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "ENOAA – FAQ 2 colonnes", "blocks": [ { "type": "question" }, { "type": "question" } ] } ]
+}
+{% endschema %}

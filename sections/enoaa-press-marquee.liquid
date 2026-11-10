@@ -1,0 +1,42 @@
+<div class="enoaa-marquee" style="--enoaa-speed: {{ section.settings.speed }}s;">
+  <div class="enoaa-marquee__track">
+    {%- for n in (1..2) -%}
+      <div class="enoaa-marquee__group" {% if n == 2 %}aria-hidden="true"{% endif %}>
+        {%- for i in (1..3) -%}
+          {%- for block in section.blocks -%}
+            <span class="enoaa-marquee__item" {% if n == 1 and i == 1 %}{{ block.shopify_attributes }}{% endif %}>
+              {%- if block.settings.logo != blank -%}
+                {{ block.settings.logo | image_url: height: 80 | image_tag: loading: 'lazy', alt: block.settings.text }}
+              {%- else -%}
+                {{ block.settings.text | escape }}
+              {%- endif -%}
+            </span>
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "ENOAA – Bandeau logos",
+  "class": "shopify-section--enoaa-marquee",
+  "settings": [
+    { "type": "range", "id": "speed", "label": "Durée d'un défilement (secondes)", "min": 10, "max": 80, "step": 5, "default": 35 }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo / texte",
+      "settings": [
+        { "type": "image_picker", "id": "logo", "label": "Logo (image)" },
+        { "type": "text", "id": "text", "label": "Texte (si pas d'image)", "default": "[LOGO PRESSE]" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "ENOAA – Bandeau logos", "blocks": [ { "type": "logo" }, { "type": "logo" }, { "type": "logo" }, { "type": "logo" }, { "type": "logo" } ] }
+  ]
+}
+{% endschema %}

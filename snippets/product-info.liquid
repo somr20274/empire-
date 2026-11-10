@@ -325,6 +325,9 @@
           </div>
         {%- endif -%}
 
+      {%- when 'enoaa_intro', 'enoaa_benefits', 'enoaa_bundle', 'enoaa_shipping', 'enoaa_guarantee' -%}
+        {%- render 'enoaa-pdp-block', block: block, product: product, product_form_id: product_form_id -%}
+
       {%- when 'share_buttons' -%}
         <div class="product-form__share" {{ block.shopify_attributes }}>
           <div class="product-info__share-buttons">

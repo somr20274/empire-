@@ -1,0 +1,46 @@
+<div class="enoaa-section" style="--enoaa-pad: {{ section.settings.padding }}px;">
+  <div class="enoaa-container">
+    <div class="enoaa-rv__top">
+      <div class="enoaa-rv__score">
+        <strong class="h5">{{ section.settings.title | escape }}</strong><br>
+        <span class="enoaa-stars">★★★★★</span> {{ section.settings.score_text | escape }}
+      </div>
+      {%- if section.settings.button_label != blank -%}<a class="enoaa-rv__btn" href="{{ section.settings.button_link | default: '#' }}">{{ section.settings.button_label | escape }}</a>{%- endif -%}
+    </div>
+    {%- for block in section.blocks -%}
+      <div class="enoaa-rv" {{ block.shopify_attributes }}>
+        <span class="enoaa-stars">★★★★★</span>
+        <div><span class="enoaa-rv__name">{{ block.settings.name | escape }}</span> <span class="enoaa-rv__date">{{ block.settings.date | escape }}</span></div>
+        {%- if block.settings.title != blank -%}<div class="enoaa-rv__title">{{ block.settings.title | escape }}</div>{%- endif -%}
+        <div>{{ block.settings.text }}</div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "ENOAA – Avis clients",
+  "settings": [
+    { "type": "paragraph", "content": "Si vous installez une appli d'avis (Judge.me, Loox…), remplacez cette section par le bloc de l'appli." },
+    { "type": "text", "id": "title", "label": "Titre", "default": "Avis clients" },
+    { "type": "text", "id": "score_text", "label": "Note globale", "default": "[NOTE] sur 5 · [CHIFFRE] avis" },
+    { "type": "text", "id": "button_label", "label": "Texte du bouton", "default": "Écrire un avis" },
+    { "type": "url", "id": "button_link", "label": "Lien du bouton" },
+    { "type": "range", "id": "padding", "label": "Espacement vertical", "min": 0, "max": 120, "step": 4, "default": 48, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Avis",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Prénom", "default": "[PRÉNOM]" },
+        { "type": "text", "id": "date", "label": "Date", "default": "[JJ/MM/AAAA]" },
+        { "type": "text", "id": "title", "label": "Titre de l'avis" },
+        { "type": "richtext", "id": "text", "label": "Avis", "default": "<p>[AVIS CLIENT]</p>" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "ENOAA – Avis clients", "blocks": [ { "type": "review" }, { "type": "review" }, { "type": "review" } ] } ]
+}
+{% endschema %}
