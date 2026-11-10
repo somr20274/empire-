@@ -18,9 +18,50 @@
             "heading_tag": "h3"
           }
         },
+        "enoaa_intro": {
+          "type": "enoaa_intro",
+          "settings": {
+            "pill": "MEILLEURE VENTE",
+            "headline": "Des chaussettes en maille épaisse, pensées pour les pieds toujours gelés",
+            "proof": "<strong>Camille</strong> et plus de 50 000 femmes les ont adoptées",
+            "rating_text": "4,9 | 868 avis vérifiés"
+          }
+        },
         "badges": {
           "type": "badges",
           "settings": {}
+        },
+        "enoaa_benefits": {
+          "type": "enoaa_benefits",
+          "settings": {
+            "benefit_1": "Bien plus chaudes qu'elles n'en ont l'air",
+            "benefit_2": "Tiennent en place toutes seules, sans comprimer",
+            "benefit_3": "Si confortables qu'on oublie qu'on les porte",
+            "benefit_4": "Deux tailles : du 35 au 38 ou du 39 au 42"
+          }
+        },
+        "enoaa_bundle": {
+          "type": "enoaa_bundle",
+          "settings": {
+            "option_name": "Taille",
+            "pairs_per_pack": 5,
+            "pack_label": "Pack",
+            "hide_variant_picker": true,
+            "selected_card": 2,
+            "contents": "Crème:#E8DCC8, Camel:#B5824E, Taupe:#AB9B8E, Chocolat:#4A3428, Noir:#1E1E1E",
+            "title_1": "5 paires",
+            "packs_1": 1,
+            "free_1": 0,
+            "tag_1": "",
+            "title_2": "5 achetées = 5 offertes",
+            "packs_2": 2,
+            "free_2": 1,
+            "tag_2": "Black Friday en avance",
+            "title_3": "",
+            "packs_3": 0,
+            "free_3": 0,
+            "tag_3": ""
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -44,31 +85,6 @@
             "payment_button_text_color": ""
           }
         },
-        "enoaa_intro": {
-          "type": "enoaa_intro",
-          "settings": {
-            "pill": "MEILLEURE VENTE",
-            "headline": "Des chaussettes en maille épaisse, pensées pour les pieds toujours gelés",
-            "proof": "<strong>Camille</strong> et plus de 50 000 femmes les ont adoptées",
-            "rating_text": "4,9 | 868 avis vérifiés"
-          }
-        },
-        "enoaa_benefits": {
-          "type": "enoaa_benefits",
-          "settings": {
-            "benefit_1": "Bien plus chaudes qu'elles n'en ont l'air",
-            "benefit_2": "Tiennent en place toutes seules, sans comprimer",
-            "benefit_3": "Si confortables qu'on oublie qu'on les porte",
-            "benefit_4": "Deux tailles : du 35 au 38 ou du 39 au 42"
-          }
-        },
-        "enoaa_bundle": {
-          "type": "enoaa_bundle",
-          "settings": {
-            "option_name": "Taille",
-            "tag_2": "Black Friday en avance"
-          }
-        },
         "enoaa_shipping": {
           "type": "enoaa_shipping",
           "settings": {
@@ -89,42 +105,47 @@
           "type": "collapsible_text",
           "settings": {
             "title": "Ce que contient le colis",
-            "content": "<p>5 paires de chaussettes ENOAA en maille épaisse, dans les teintes de votre pack, livrées dans une pochette prête à offrir.</p>"
+            "content": "<p>5 paires de chaussettes ENOAA en maille épaisse, dans les teintes de votre pack, livrées dans une pochette prête à offrir.</p>",
+            "page": ""
           }
         },
         "acc_garantie": {
           "type": "collapsible_text",
           "settings": {
             "title": "Garantie satisfaite ou remboursée 30 jours",
-            "content": "<p>Vous avez 30 jours pour les essayer chez vous. Si elles ne vous conviennent pas, écrivez-nous : on vous propose un échange ou un remboursement. Votre droit de rétractation légal de 14 jours s'applique en plus.</p>"
+            "content": "<p>Vous avez 30 jours pour les essayer chez vous. Si elles ne vous conviennent pas, écrivez-nous : on vous propose un échange ou un remboursement. Votre droit de rétractation légal de 14 jours s'applique en plus.</p>",
+            "page": ""
           }
         },
         "acc_livraison": {
           "type": "collapsible_text",
           "settings": {
             "title": "Livraison et retours",
-            "content": "<p>Commande préparée sous 24 h ouvrées, livraison suivie en France métropolitaine en [DÉLAI] jours ouvrés. Livraison offerte dès [MONTANT] €.</p><p>Retours simples : contactez-nous, on vous envoie l'étiquette.</p>"
+            "content": "<p>Commande préparée sous 24 h ouvrées, livraison suivie en France métropolitaine en [DÉLAI] jours ouvrés. Livraison offerte dès [MONTANT] €.</p><p>Retours simples : contactez-nous, on vous envoie l'étiquette.</p>",
+            "page": ""
           }
         },
         "acc_taille": {
           "type": "collapsible_text",
           "settings": {
             "title": "Guide des tailles",
-            "content": "<p><strong>Taille S/M</strong> : du 35 au 38<br><strong>Taille L/XL</strong> : du 39 au 42</p><p>Entre deux tailles ? Prenez la plus grande pour un effet plus « slouchy ».</p>"
+            "content": "<p><strong>Taille S/M</strong> : du 35 au 38<br><strong>Taille L/XL</strong> : du 39 au 42</p><p>Entre deux tailles ? Prenez la plus grande pour un effet plus « slouchy ».</p>",
+            "page": ""
           }
         },
         "acc_matiere": {
           "type": "collapsible_text",
           "settings": {
             "title": "Matière et entretien",
-            "content": "<p>[COMPOSITION, ex. 70 % coton, 25 % polyester, 5 % élasthanne]. Intérieur bouclette double épaisseur.</p><p>Lavage en machine à 30 °C, à l'envers. Pas de sèche-linge pour garder leur gonflant.</p>"
+            "content": "<p>[COMPOSITION, ex. 70 % coton, 25 % polyester, 5 % élasthanne]. Intérieur bouclette double épaisseur.</p><p>Lavage en machine à 30 °C, à l'envers. Pas de sèche-linge pour garder leur gonflant.</p>",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "badges",
-        "enoaa_intro",
         "title",
+        "enoaa_intro",
+        "badges",
         "enoaa_benefits",
         "enoaa_bundle",
         "variant_picker",
@@ -206,37 +227,37 @@
         "t1": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/enoaa-avis-1.jpg",
             "name": "[PRÉNOM], [ÂGE]",
             "verified": true,
-            "text": "<p>[AVIS CLIENT]</p>",
-            "image": "shopify://shop_images/enoaa-avis-1.jpg"
+            "text": "<p>[AVIS CLIENT]</p>"
           }
         },
         "t2": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/enoaa-avis-2.jpg",
             "name": "[PRÉNOM], [ÂGE]",
             "verified": true,
-            "text": "<p>[AVIS CLIENT]</p>",
-            "image": "shopify://shop_images/enoaa-avis-2.jpg"
+            "text": "<p>[AVIS CLIENT]</p>"
           }
         },
         "t3": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/enoaa-avis-3.jpg",
             "name": "[PRÉNOM], [ÂGE]",
             "verified": true,
-            "text": "<p>[AVIS CLIENT]</p>",
-            "image": "shopify://shop_images/enoaa-avis-3.jpg"
+            "text": "<p>[AVIS CLIENT]</p>"
           }
         },
         "t4": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/chaussettes-slouchy-taupe-pr-s-de-la-chemin-e.png",
             "name": "[PRÉNOM], [ÂGE]",
             "verified": true,
-            "text": "<p>[AVIS CLIENT]</p>",
-            "image": "shopify://shop_images/chaussettes-slouchy-taupe-pr-s-de-la-chemin-e.png"
+            "text": "<p>[AVIS CLIENT]</p>"
           }
         }
       },
@@ -254,6 +275,7 @@
     "feat1": {
       "type": "enoaa-image-text",
       "settings": {
+        "image": "shopify://shop_images/chaussettes-en-maille-paisse-macro-textile.png",
         "image_position": "left",
         "heading": "Une chaleur qui part",
         "highlight": "de l'intérieur",
@@ -262,13 +284,14 @@
         "check_1": "Intérieur double épaisseur",
         "check_2": "Toucher ultra-doux",
         "button_label": "",
-        "padding": 40,
-        "image": "shopify://shop_images/chaussettes-en-maille-paisse-macro-textile.png"
+        "button_link": "",
+        "padding": 40
       }
     },
     "feat2": {
       "type": "enoaa-image-text",
       "settings": {
+        "image": "shopify://shop_images/chaussette-slouchy-taupe-photo-studio.png",
         "image_position": "right",
         "heading": "Elles restent en place,",
         "highlight": "sans serrer",
@@ -277,13 +300,14 @@
         "check_1": "Revers côtelé souple",
         "check_2": "Aucune marque d'élastique",
         "button_label": "",
-        "padding": 40,
-        "image": "shopify://shop_images/chaussette-slouchy-taupe-photo-studio.png"
+        "button_link": "",
+        "padding": 40
       }
     },
     "feat3": {
       "type": "enoaa-image-text",
       "settings": {
+        "image": "shopify://shop_images/enoaa-cinq-teintes.jpg",
         "image_position": "left",
         "heading": "Cinq paires, cinq",
         "highlight": "teintes d'hiver",
@@ -292,8 +316,8 @@
         "check_1": "5 paires par pack",
         "check_2": "Teintes assorties",
         "button_label": "",
-        "padding": 40,
-        "image": "shopify://shop_images/enoaa-cinq-teintes.jpg"
+        "button_link": "",
+        "padding": 40
       }
     },
     "comparison": {
@@ -349,15 +373,16 @@
       ],
       "settings": {
         "title": "",
+        "image": "shopify://shop_images/jambes-en-chaussettes-slouchy-cr-me.png",
         "brand_name": "ENOAA",
         "other_name": "Chaussettes polaires classiques",
-        "padding": 48,
-        "image": "shopify://shop_images/jambes-en-chaussettes-slouchy-cr-me.png"
+        "padding": 48
       }
     },
     "gift": {
       "type": "enoaa-image-text",
       "settings": {
+        "image": "shopify://shop_images/bo-te-cadeau-kraft-de-no-l-avec-chaussettes-en-maille.png",
         "image_position": "left",
         "heading": "Le cadeau idéal pour",
         "highlight": "les pieds frileux",
@@ -366,8 +391,8 @@
         "check_1": "Prêt à offrir",
         "check_2": "Tailles faciles",
         "button_label": "",
-        "padding": 40,
-        "image": "shopify://shop_images/bo-te-cadeau-kraft-de-no-l-avec-chaussettes-en-maille.png"
+        "button_link": "",
+        "padding": 40
       }
     },
     "faq": {
@@ -567,12 +592,14 @@
         "title": "Avis clients",
         "score_text": "4,9 sur 5 · 868 avis",
         "button_label": "Écrire un avis",
+        "button_link": "",
         "padding": 40
       }
     },
     "morepacks": {
       "type": "featured-collection",
       "settings": {
+        "collection": "",
         "products": [],
         "full_width": true,
         "stack_products": false,
@@ -583,7 +610,15 @@
         "subheading": "",
         "title": "Packs unicolores",
         "content": "<p>5 paires, toutes dans votre teinte préférée.</p>",
-        "link_text": ""
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
       }
     }
   },
