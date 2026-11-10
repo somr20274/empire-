@@ -1138,6 +1138,29 @@ quick buy information in a template, that will be extracted in JS, but ensure it
       ]
     },
     {
+      "type": "enoaa_rating",
+      "name": "ENOAA – Note et avis",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Texte",
+          "default": "4,9 | 868 avis vérifiés"
+        },
+        {
+          "type": "range",
+          "id": "size",
+          "label": "Taille du texte",
+          "min": 12,
+          "max": 28,
+          "step": 1,
+          "default": 17,
+          "unit": "px"
+        }
+      ]
+    },
+    {
       "type": "enoaa_benefits",
       "name": "ENOAA – Bénéfices",
       "limit": 2,

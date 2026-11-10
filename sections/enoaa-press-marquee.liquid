@@ -1,4 +1,4 @@
-<div class="enoaa-marquee" style="--enoaa-speed: {{ section.settings.speed }}s;">
+<div class="enoaa-marquee" style="--enoaa-speed: {{ section.settings.speed }}s; --enoaa-logo-h: {{ section.settings.logo_height }}px; --enoaa-logo-h-mobile: {{ section.settings.logo_height_mobile }}px;">
   <div class="enoaa-marquee__track">
     {%- for n in (1..2) -%}
       <div class="enoaa-marquee__group" {% if n == 2 %}aria-hidden="true"{% endif %}>
@@ -6,7 +6,7 @@
           {%- for block in section.blocks -%}
             <span class="enoaa-marquee__item" {% if n == 1 and i == 1 %}{{ block.shopify_attributes }}{% endif %}>
               {%- if block.settings.logo != blank -%}
-                {{ block.settings.logo | image_url: height: 80 | image_tag: loading: 'lazy', alt: block.settings.text }}
+                {{ block.settings.logo | image_url: height: 240 | image_tag: loading: 'lazy', alt: block.settings.text }}
               {%- else -%}
                 {{ block.settings.text | escape }}
               {%- endif -%}
@@ -23,20 +23,76 @@
   "name": "ENOAA – Bandeau logos",
   "class": "shopify-section--enoaa-marquee",
   "settings": [
-    { "type": "range", "id": "speed", "label": "Durée d'un défilement (secondes)", "min": 10, "max": 80, "step": 5, "default": 35 }
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Durée d'un défilement (secondes)",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "label": "Taille des logos (ordinateur)",
+      "min": 24,
+      "max": 120,
+      "step": 4,
+      "default": 64,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "logo_height_mobile",
+      "label": "Taille des logos (mobile)",
+      "min": 16,
+      "max": 80,
+      "step": 4,
+      "default": 44,
+      "unit": "px"
+    }
   ],
   "blocks": [
     {
       "type": "logo",
       "name": "Logo / texte",
       "settings": [
-        { "type": "image_picker", "id": "logo", "label": "Logo (image)" },
-        { "type": "text", "id": "text", "label": "Texte (si pas d'image)", "default": "[LOGO PRESSE]" }
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo (image)"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texte (si pas d'image)",
+          "default": "[LOGO PRESSE]"
+        }
       ]
     }
   ],
   "presets": [
-    { "name": "ENOAA – Bandeau logos", "blocks": [ { "type": "logo" }, { "type": "logo" }, { "type": "logo" }, { "type": "logo" }, { "type": "logo" } ] }
+    {
+      "name": "ENOAA – Bandeau logos",
+      "blocks": [
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        }
+      ]
+    }
   ]
 }
 {% endschema %}

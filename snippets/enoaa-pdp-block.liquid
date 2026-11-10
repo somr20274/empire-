@@ -131,4 +131,10 @@
       </div>
     </div>
 
+  {%- when 'enoaa_rating' -%}
+    <div class="enoaa-rating" style="--enoaa-rating-size: {{ block.settings.size }}px;" {{ block.shopify_attributes }}>
+      <span class="enoaa-stars" aria-hidden="true">★★★★★</span>
+      <span class="enoaa-rating__text">{{ block.settings.text }}</span>
+    </div>
+
 {%- endcase -%}
