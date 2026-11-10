@@ -118,7 +118,7 @@
         "show_country_selector": true,
         "show_country_flag": true,
         "show_country_name": true,
-        "show_locale_selector": true
+        "show_locale_selector": false
       }
     }
   },
