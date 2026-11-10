@@ -1175,79 +1175,127 @@ quick buy information in a template, that will be extracted in JS, but ensure it
       "settings": [
         {
           "type": "paragraph",
-          "content": "Affiche les valeurs d'une option produit (ex. « Offre ») sous forme de cartes. Le prix de chaque carte vient de la variante."
+          "content": "Chaque carte ajoute X packs au panier, avec une taille à choisir par pack. Pour que les packs offerts soient gratuits au paiement, créez une réduction automatique « Achetez X, obtenez Y » dans Réductions."
         },
         {
           "type": "text",
           "id": "option_name",
-          "label": "Nom de l'option produit",
-          "default": "Offre"
-        },
-        {
-          "type": "text",
-          "id": "label_1",
-          "label": "Carte 1 – titre",
-          "default": "5 paires"
+          "label": "Nom de l'option taille",
+          "default": "Taille"
         },
         {
           "type": "number",
-          "id": "pairs_1",
-          "label": "Carte 1 – nombre de paires (prix/paire)",
+          "id": "pairs_per_pack",
+          "label": "Paires par pack (pour le prix à la paire)",
           "default": 5
         },
         {
           "type": "text",
-          "id": "sub_1",
-          "label": "Carte 1 – sous-titre (si pas de prix/paire)"
+          "id": "pack_label",
+          "label": "Libellé par pack",
+          "default": "Pack"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_variant_picker",
+          "label": "Masquer le sélecteur de variantes du thème",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "selected_card",
+          "label": "Carte présélectionnée",
+          "min": 1,
+          "max": 3,
+          "step": 1,
+          "default": 2
         },
         {
           "type": "text",
-          "id": "tag_1",
-          "label": "Carte 1 – étiquette"
+          "id": "contents",
+          "label": "Contenu d'un pack (Nom:couleur, séparés par des virgules)",
+          "default": "Crème:#E8DCC8, Camel:#B5824E, Taupe:#AB9B8E, Chocolat:#4A3428, Noir:#1E1E1E"
+        },
+        {
+          "type": "header",
+          "content": "Carte 1"
         },
         {
           "type": "text",
-          "id": "label_2",
-          "label": "Carte 2 – titre",
-          "default": "5 achetées = 5 offertes"
+          "id": "title_1",
+          "label": "Titre",
+          "default": "5 paires"
         },
         {
           "type": "number",
-          "id": "pairs_2",
-          "label": "Carte 2 – nombre de paires",
-          "default": 10
-        },
-        {
-          "type": "text",
-          "id": "sub_2",
-          "label": "Carte 2 – sous-titre"
-        },
-        {
-          "type": "text",
-          "id": "tag_2",
-          "label": "Carte 2 – étiquette",
-          "default": "Offre Black Friday"
-        },
-        {
-          "type": "text",
-          "id": "label_3",
-          "label": "Carte 3 – titre"
+          "id": "packs_1",
+          "label": "Nombre de packs",
+          "default": 1
         },
         {
           "type": "number",
-          "id": "pairs_3",
-          "label": "Carte 3 – nombre de paires",
+          "id": "free_1",
+          "label": "Dont packs offerts",
           "default": 0
         },
         {
           "type": "text",
-          "id": "sub_3",
-          "label": "Carte 3 – sous-titre"
+          "id": "tag_1",
+          "label": "Étiquette"
+        },
+        {
+          "type": "header",
+          "content": "Carte 2"
+        },
+        {
+          "type": "text",
+          "id": "title_2",
+          "label": "Titre",
+          "default": "5 achetées = 5 offertes"
+        },
+        {
+          "type": "number",
+          "id": "packs_2",
+          "label": "Nombre de packs",
+          "default": 2
+        },
+        {
+          "type": "number",
+          "id": "free_2",
+          "label": "Dont packs offerts",
+          "default": 1
+        },
+        {
+          "type": "text",
+          "id": "tag_2",
+          "label": "Étiquette",
+          "default": "Black Friday en avance"
+        },
+        {
+          "type": "header",
+          "content": "Carte 3"
+        },
+        {
+          "type": "text",
+          "id": "title_3",
+          "label": "Titre"
+        },
+        {
+          "type": "number",
+          "id": "packs_3",
+          "label": "Nombre de packs",
+          "default": 0
+        },
+        {
+          "type": "number",
+          "id": "free_3",
+          "label": "Dont packs offerts",
+          "default": 0
         },
         {
           "type": "text",
           "id": "tag_3",
-          "label": "Carte 3 – étiquette"
+          "label": "Étiquette"
         }
       ]
     },

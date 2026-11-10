@@ -65,19 +65,8 @@
         "enoaa_bundle": {
           "type": "enoaa_bundle",
           "settings": {
-            "option_name": "Offre",
-            "label_1": "5 paires",
-            "pairs_1": 5,
-            "sub_1": "",
-            "tag_1": "",
-            "label_2": "5 achetées = 5 offertes",
-            "pairs_2": 10,
-            "sub_2": "",
-            "tag_2": "Offre Black Friday",
-            "label_3": "",
-            "pairs_3": 0,
-            "sub_3": "",
-            "tag_3": ""
+            "option_name": "Taille",
+            "tag_2": "Black Friday en avance"
           }
         },
         "enoaa_shipping": {
@@ -213,10 +202,6 @@
     },
     "testimonials": {
       "type": "enoaa-testimonials",
-      "settings": {
-        "title": "Ce qu'en disent les frileuses",
-        "padding": 48
-      },
       "blocks": {
         "t1": {
           "type": "review",
@@ -256,7 +241,11 @@
         "t2",
         "t3",
         "t4"
-      ]
+      ],
+      "settings": {
+        "title": "Ce qu'en disent les frileuses",
+        "padding": 48
+      }
     },
     "feat1": {
       "type": "enoaa-image-text",
@@ -302,12 +291,6 @@
     },
     "comparison": {
       "type": "enoaa-comparison",
-      "settings": {
-        "title": "",
-        "brand_name": "ENOAA",
-        "other_name": "Chaussettes polaires classiques",
-        "padding": 48
-      },
       "blocks": {
         "r1": {
           "type": "row",
@@ -356,7 +339,13 @@
         "r3",
         "r4",
         "r5"
-      ]
+      ],
+      "settings": {
+        "title": "",
+        "brand_name": "ENOAA",
+        "other_name": "Chaussettes polaires classiques",
+        "padding": 48
+      }
     },
     "gift": {
       "type": "enoaa-image-text",
@@ -374,10 +363,6 @@
     },
     "faq": {
       "type": "enoaa-faq",
-      "settings": {
-        "title": "Questions fréquentes",
-        "padding": 48
-      },
       "blocks": {
         "q1": {
           "type": "question",
@@ -517,16 +502,14 @@
         "q15",
         "q16",
         "q17"
-      ]
+      ],
+      "settings": {
+        "title": "Questions fréquentes",
+        "padding": 48
+      }
     },
     "reviews": {
       "type": "enoaa-reviews",
-      "settings": {
-        "title": "Avis clients",
-        "score_text": "[NOTE] sur 5 · [CHIFFRE] avis",
-        "button_label": "Écrire un avis",
-        "padding": 40
-      },
       "blocks": {
         "rv1": {
           "type": "review",
@@ -570,7 +553,13 @@
         "rv2",
         "rv3",
         "rv4"
-      ]
+      ],
+      "settings": {
+        "title": "Avis clients",
+        "score_text": "[NOTE] sur 5 · [CHIFFRE] avis",
+        "button_label": "Écrire un avis",
+        "padding": 40
+      }
     },
     "morepacks": {
       "type": "featured-collection",

@@ -30,45 +30,70 @@
     </ul>
 
   {%- when 'enoaa_bundle' -%}
-    {%- assign bundle_option = product.options_with_values | where: 'name', block.settings.option_name | first -%}
-    {%- if bundle_option -%}
-      <div class="enoaa-bundle" data-enoaa-bundle data-option-name="{{ bundle_option.name | escape }}" data-form="{{ product_form_id }}" {{ block.shopify_attributes }}>
-        <style>.variant-picker__option[data-option-name="{{ bundle_option.name | escape }}"]{display:none!important}</style>
-        {%- for value in bundle_option.values -%}
-          {%- liquid
-            assign idx = forloop.index
-            assign opt_key = 'option' | append: bundle_option.position
-            assign card_variant = product.variants | where: opt_key, value | first
-            assign label_key = 'label_' | append: idx
-            assign sub_key = 'sub_' | append: idx
-            assign tag_key = 'tag_' | append: idx
-            assign pairs_key = 'pairs_' | append: idx
-            assign is_selected = false
-            if bundle_option.selected_value == value
-              assign is_selected = true
-            endif
-          -%}
-          <button type="button" class="enoaa-bundle__card{% if is_selected %} is-selected{% endif %}" data-value="{{ value | escape }}" aria-pressed="{{ is_selected }}">
-            {%- if block.settings[tag_key] != blank -%}<span class="enoaa-bundle__tag">{{ block.settings[tag_key] | escape }}</span>{%- endif -%}
+    {%- liquid
+      assign size_option = product.options_with_values | where: 'name', block.settings.option_name | first
+      assign base_variant = product.selected_or_first_available_variant
+      assign pairs_per_pack = block.settings.pairs_per_pack | at_least: 1
+      assign selected_card = block.settings.selected_card
+    -%}
+    <div class="enoaa-bundle" data-enoaa-bundle data-form="{{ product_form_id }}" {{ block.shopify_attributes }}>
+      {%- if block.settings.hide_variant_picker -%}<style>.product-info__variant-picker { display: none !important; }</style>{%- endif -%}
+      {%- for i in (1..3) -%}
+        {%- liquid
+          assign title_key = 'title_' | append: i
+          assign qty_key = 'packs_' | append: i
+          assign free_key = 'free_' | append: i
+          assign tag_key = 'tag_' | append: i
+          assign packs = block.settings[qty_key] | default: 0
+          if block.settings[title_key] == blank or packs < 1
+            continue
+          endif
+          assign free = block.settings[free_key] | default: 0 | at_most: packs
+          assign paid = packs | minus: free
+          assign card_price = base_variant.price | times: paid
+          assign card_compare = base_variant.price | times: packs
+          assign pairs = packs | times: pairs_per_pack
+          assign per_pair = card_price | divided_by: pairs
+        -%}
+        <div class="enoaa-bundle__card{% if i == selected_card %} is-selected{% endif %}" data-card data-packs="{{ packs }}" role="radio" tabindex="0" aria-checked="{% if i == selected_card %}true{% else %}false{% endif %}">
+          {%- if block.settings[tag_key] != blank -%}<span class="enoaa-bundle__tag">{{ block.settings[tag_key] | escape }}</span>{%- endif -%}
+          <div class="enoaa-bundle__row">
             <span class="enoaa-bundle__radio" aria-hidden="true"></span>
             <span class="enoaa-bundle__main">
-              <span class="enoaa-bundle__label">{% if block.settings[label_key] != blank %}{{ block.settings[label_key] | escape }}{% else %}{{ value | escape }}{% endif %}</span>
-              {%- if card_variant and block.settings[pairs_key] > 0 -%}
-                <span class="enoaa-bundle__sub">soit {{ card_variant.price | divided_by: block.settings[pairs_key] | money }} la paire</span>
-              {%- elsif block.settings[sub_key] != blank -%}
-                <span class="enoaa-bundle__sub">{{ block.settings[sub_key] | escape }}</span>
-              {%- endif -%}
+              <span class="enoaa-bundle__label">{{ block.settings[title_key] | escape }}</span>
+              <span class="enoaa-bundle__sub">{{ per_pair | money }} la paire</span>
             </span>
-            {%- if card_variant -%}
-              <span class="enoaa-bundle__price">
-                <strong>{{ card_variant.price | money }}</strong>
-                {%- if card_variant.compare_at_price > card_variant.price -%}<s>{{ card_variant.compare_at_price | money }}</s>{%- endif -%}
-              </span>
-            {%- endif -%}
-          </button>
-        {%- endfor -%}
-      </div>
-    {%- endif -%}
+            <span class="enoaa-bundle__price">
+              <strong>{{ card_price | money }}</strong>
+              {%- if card_compare > card_price -%}<s>{{ card_compare | money }}</s>{%- endif -%}
+            </span>
+          </div>
+          {%- if size_option -%}
+            <div class="enoaa-bundle__picks">
+              {%- for n in (1..packs) -%}
+                <label class="enoaa-bundle__pick">
+                  <span>{% if packs > 1 %}{{ block.settings.pack_label | escape }} {{ n }}{% else %}{{ size_option.name | escape }}{% endif %}</span>
+                  <select data-pack-select aria-label="{{ size_option.name | escape }} {{ n }}">
+                    {%- for v in product.variants -%}
+                      <option value="{{ v.id }}" {% if v.id == base_variant.id %}selected{% endif %} {% unless v.available %}disabled{% endunless %}>{{ v.title | escape }}</option>
+                    {%- endfor -%}
+                  </select>
+                </label>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+          {%- if block.settings.contents != blank -%}
+            <div class="enoaa-bundle__contents">
+              {%- assign items = block.settings.contents | split: ',' -%}
+              {%- for item in items -%}
+                {%- assign parts = item | split: ':' -%}
+                <span><i style="background: {{ parts[1] | strip | default: '#ccc' }}"></i>{{ packs }}x {{ parts[0] | strip }}</span>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
 
   {%- when 'enoaa_shipping' -%}
     {%- liquid
