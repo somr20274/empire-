@@ -49,8 +49,8 @@
           "settings": {
             "pill": "MEILLEURE VENTE",
             "headline": "Des chaussettes en maille épaisse, pensées pour les pieds toujours gelés",
-            "proof": "<strong>Camille</strong> et [CHIFFRE] clientes les ont adoptées",
-            "rating_text": "[NOTE] | [CHIFFRE] avis vérifiés"
+            "proof": "<strong>Camille</strong> et plus de 50 000 femmes les ont adoptées",
+            "rating_text": "4,9 | 868 avis vérifiés"
           }
         },
         "enoaa_benefits": {
@@ -556,7 +556,7 @@
       ],
       "settings": {
         "title": "Avis clients",
-        "score_text": "[NOTE] sur 5 · [CHIFFRE] avis",
+        "score_text": "4,9 sur 5 · 868 avis",
         "button_label": "Écrire un avis",
         "padding": 40
       }
