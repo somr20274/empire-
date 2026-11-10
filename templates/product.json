@@ -18,6 +18,13 @@
             "heading_tag": "h3"
           }
         },
+        "enoaa_rating": {
+          "type": "enoaa_rating",
+          "settings": {
+            "text": "4,9 | 868 avis vérifiés",
+            "size": 17
+          }
+        },
         "enoaa_intro": {
           "type": "enoaa_intro",
           "settings": {
@@ -140,13 +147,6 @@
             "title": "Matière et entretien",
             "content": "<p>[COMPOSITION, ex. 70 % coton, 25 % polyester, 5 % élasthanne]. Intérieur bouclette double épaisseur.</p><p>Lavage en machine à 30 °C, à l'envers. Pas de sèche-linge pour garder leur gonflant.</p>",
             "page": ""
-          }
-        },
-        "enoaa_rating": {
-          "type": "enoaa_rating",
-          "settings": {
-            "text": "4,9 | 868 avis vérifiés",
-            "size": 17
           }
         }
       },
@@ -596,6 +596,7 @@
         "rv3",
         "rv4"
       ],
+      "disabled": true,
       "settings": {
         "title": "Avis clients",
         "score_text": "4,9 sur 5 · 868 avis",

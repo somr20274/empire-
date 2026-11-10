@@ -21,6 +21,8 @@
             "mobile_icon_width": 24,
             "icon_width": 24,
             "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
             "title": "Livraison suivie",
             "content": "<p>Expédition sous 24 h ouvrées en France métropolitaine.</p>"
           }
@@ -32,6 +34,8 @@
             "mobile_icon_width": 24,
             "icon_width": 24,
             "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
             "title": "Service client",
             "content": "<p>Une question ? Écrivez-nous à [E-MAIL], réponse sous 24 h.</p>"
           }
@@ -43,6 +47,8 @@
             "mobile_icon_width": 24,
             "icon_width": 24,
             "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
             "title": "Satisfaite ou remboursée",
             "content": "<p>30 jours pour changer d'avis, en plus des 14 jours de rétractation.</p>"
           }
@@ -54,6 +60,8 @@
             "mobile_icon_width": 24,
             "icon_width": 24,
             "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
             "title": "Paiement sécurisé",
             "content": "<p>CB, Apple Pay, Google Pay et PayPal.</p>"
           }
@@ -67,14 +75,35 @@
       ],
       "settings": {
         "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
         "heading_tag": "h6",
         "text_alignment": "center",
-        "icon_spacing": "small"
+        "icon_spacing": "small",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "footer": {
       "type": "footer",
       "blocks": {
+        "links": {
+          "type": "links",
+          "settings": {
+            "menu": "footer",
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
+        "legal": {
+          "type": "text",
+          "settings": {
+            "title": "Informations légales",
+            "content": "<p><a href=\"/policies/terms-of-service\">Conditions générales de vente</a><br><a href=\"/policies/legal-notice\">Mentions légales</a><br><a href=\"/policies/refund-policy\">Droit de rétractation (14 jours)</a><br><a href=\"/policies/privacy-policy\">Politique de confidentialité</a><br><a href=\"/policies/shipping-policy\">Livraison</a></p>",
+            "enable_follow_on_shop": true
+          }
+        },
         "newsletter": {
           "type": "newsletter",
           "settings": {
@@ -83,31 +112,9 @@
             "title": "Recevez nos offres en avant-première",
             "content": "<p>Nouveautés, ventes privées et petites attentions. Jamais de spam.</p>"
           }
-        },
-        "links": {
-          "type": "links",
-          "settings": {
-            "menu": "footer",
-            "show_menu_title": true
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "title": "ENOAA",
-            "content": "<p>[ADRESSE DE L'ENTREPRISE]<br>Contact : [E-MAIL]</p>"
-          }
-        },
-        "legal": {
-          "type": "text",
-          "settings": {
-            "title": "Informations légales",
-            "content": "<p><a href=\"/policies/terms-of-service\">Conditions générales de vente</a><br><a href=\"/policies/legal-notice\">Mentions légales</a><br><a href=\"/policies/refund-policy\">Droit de rétractation (14 jours)</a><br><a href=\"/policies/privacy-policy\">Politique de confidentialité</a><br><a href=\"/policies/shipping-policy\">Livraison</a></p>"
-          }
         }
       },
       "block_order": [
-        "text",
         "links",
         "legal",
         "newsletter"
