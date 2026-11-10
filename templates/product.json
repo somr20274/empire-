@@ -208,7 +208,8 @@
           "settings": {
             "name": "[PRÉNOM], [ÂGE]",
             "verified": true,
-            "text": "<p>[AVIS CLIENT]</p>"
+            "text": "<p>[AVIS CLIENT]</p>",
+            "image": "shopify://shop_images/enoaa-avis-1.jpg"
           }
         },
         "t2": {
@@ -216,7 +217,8 @@
           "settings": {
             "name": "[PRÉNOM], [ÂGE]",
             "verified": true,
-            "text": "<p>[AVIS CLIENT]</p>"
+            "text": "<p>[AVIS CLIENT]</p>",
+            "image": "shopify://shop_images/enoaa-avis-2.jpg"
           }
         },
         "t3": {
@@ -224,7 +226,8 @@
           "settings": {
             "name": "[PRÉNOM], [ÂGE]",
             "verified": true,
-            "text": "<p>[AVIS CLIENT]</p>"
+            "text": "<p>[AVIS CLIENT]</p>",
+            "image": "shopify://shop_images/enoaa-avis-3.jpg"
           }
         },
         "t4": {
@@ -232,7 +235,8 @@
           "settings": {
             "name": "[PRÉNOM], [ÂGE]",
             "verified": true,
-            "text": "<p>[AVIS CLIENT]</p>"
+            "text": "<p>[AVIS CLIENT]</p>",
+            "image": "shopify://shop_images/enoaa-produit-5-paires.jpg"
           }
         }
       },
@@ -258,7 +262,8 @@
         "check_1": "Intérieur double épaisseur",
         "check_2": "Toucher ultra-doux",
         "button_label": "",
-        "padding": 40
+        "padding": 40,
+        "image": "shopify://shop_images/enoaa-produit-5-paires.jpg"
       }
     },
     "feat2": {
@@ -272,7 +277,8 @@
         "check_1": "Revers côtelé souple",
         "check_2": "Aucune marque d'élastique",
         "button_label": "",
-        "padding": 40
+        "padding": 40,
+        "image": "shopify://shop_images/enoaa-avis-3.jpg"
       }
     },
     "feat3": {
@@ -286,7 +292,8 @@
         "check_1": "5 paires par pack",
         "check_2": "Teintes assorties",
         "button_label": "",
-        "padding": 40
+        "padding": 40,
+        "image": "shopify://shop_images/enoaa-cinq-teintes.jpg"
       }
     },
     "comparison": {
@@ -344,7 +351,8 @@
         "title": "",
         "brand_name": "ENOAA",
         "other_name": "Chaussettes polaires classiques",
-        "padding": 48
+        "padding": 48,
+        "image": "shopify://shop_images/enoaa-avis-1.jpg"
       }
     },
     "gift": {
@@ -358,7 +366,8 @@
         "check_1": "Prêt à offrir",
         "check_2": "Tailles faciles",
         "button_label": "",
-        "padding": 40
+        "padding": 40,
+        "image": "shopify://shop_images/enoaa-cinq-teintes.jpg"
       }
     },
     "faq": {
