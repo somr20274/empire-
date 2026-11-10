@@ -236,7 +236,7 @@
             "name": "[PRÉNOM], [ÂGE]",
             "verified": true,
             "text": "<p>[AVIS CLIENT]</p>",
-            "image": "shopify://shop_images/enoaa-produit-5-paires.jpg"
+            "image": "shopify://shop_images/chaussettes-slouchy-taupe-pr-s-de-la-chemin-e.png"
           }
         }
       },
@@ -263,7 +263,7 @@
         "check_2": "Toucher ultra-doux",
         "button_label": "",
         "padding": 40,
-        "image": "shopify://shop_images/enoaa-produit-5-paires.jpg"
+        "image": "shopify://shop_images/chaussettes-en-maille-paisse-macro-textile.png"
       }
     },
     "feat2": {
@@ -278,7 +278,7 @@
         "check_2": "Aucune marque d'élastique",
         "button_label": "",
         "padding": 40,
-        "image": "shopify://shop_images/enoaa-avis-3.jpg"
+        "image": "shopify://shop_images/chaussette-slouchy-taupe-photo-studio.png"
       }
     },
     "feat3": {
@@ -352,7 +352,7 @@
         "brand_name": "ENOAA",
         "other_name": "Chaussettes polaires classiques",
         "padding": 48,
-        "image": "shopify://shop_images/enoaa-avis-1.jpg"
+        "image": "shopify://shop_images/jambes-en-chaussettes-slouchy-cr-me.png"
       }
     },
     "gift": {
@@ -367,7 +367,7 @@
         "check_2": "Tailles faciles",
         "button_label": "",
         "padding": 40,
-        "image": "shopify://shop_images/enoaa-cinq-teintes.jpg"
+        "image": "shopify://shop_images/bo-te-cadeau-kraft-de-no-l-avec-chaussettes-en-maille.png"
       }
     },
     "faq": {
