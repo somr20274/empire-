@@ -180,39 +180,36 @@
     "press": {
       "type": "enoaa-press-marquee",
       "blocks": {
-        "l1": {
-          "type": "logo",
-          "settings": {
-            "text": "[LOGO PRESSE]"
-          }
-        },
         "l2": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/images_3.png",
             "text": "[LOGO PRESSE]"
           }
         },
         "l3": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Marie-Claire-Logo.png",
             "text": "[LOGO PRESSE]"
           }
         },
         "l4": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/images_2.png",
             "text": "[LOGO PRESSE]"
           }
         },
         "l5": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/images.png",
             "text": "[LOGO PRESSE]"
           }
         }
       },
       "block_order": [
-        "l1",
         "l2",
         "l3",
         "l4",
