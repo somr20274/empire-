@@ -6,7 +6,7 @@
         {%- if section.settings.image != blank -%}
           {{ section.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(max-width: 749px) 100vw, 33vw' }}
         {%- else -%}
-          {{ 'product-apparel-2' | placeholder_svg_tag }}
+          <div class="enoaa-ph">Ajoutez une image</div>
         {%- endif -%}
       </div>
       <div class="enoaa-compare__table" role="table">
