@@ -93,15 +93,15 @@
           "settings": {
             "menu": "footer",
             "show_menu_title": true,
-            "menu_title": ""
+            "menu_title": "Assistance"
           }
         },
         "legal": {
           "type": "text",
           "settings": {
             "title": "Informations légales",
-            "content": "<p><a href=\"/policies/terms-of-service\">Conditions générales de vente</a><br><a href=\"/policies/legal-notice\">Mentions légales</a><br><a href=\"/policies/refund-policy\">Droit de rétractation (14 jours)</a><br><a href=\"/policies/privacy-policy\">Politique de confidentialité</a><br><a href=\"/policies/shipping-policy\">Livraison</a></p>",
-            "enable_follow_on_shop": true
+            "content": "<p><a href=\"/policies/terms-of-sale\">Conditions générales de vente</a><br><a href=\"/policies/terms-of-service\">Conditions d'utilisation</a><br><a href=\"/policies/legal-notice\">Mentions légales</a><br><a href=\"/policies/refund-policy\">Droit de rétractation (14 jours)</a><br><a href=\"/policies/privacy-policy\">Politique de confidentialité</a><br><a href=\"/policies/contact-information\">Coordonnées</a></p>",
+            "enable_follow_on_shop": false
           }
         },
         "newsletter": {
@@ -109,12 +109,21 @@
           "settings": {
             "image_width": 150,
             "heading_size": "h3",
-            "title": "Recevez nos offres en avant-première",
-            "content": "<p>Nouveautés, ventes privées et petites attentions. Jamais de spam.</p>"
+            "title": "Offres exclusives",
+            "content": "<p>Inscrivez-vous pour être la première informée de nos nouveautés, offres et cadeaux.</p>"
+          }
+        },
+        "company": {
+          "type": "text",
+          "settings": {
+            "title": "Entreprise",
+            "content": "<p>Adresse : 5 allée de la Butte aux Cailles, Paris, France</p><p>Service client : <a href=\"mailto:contact@enoaa.com\">contact@enoaa.com</a></p><p>Réponse sous 24 h, 7j/7</p>",
+            "enable_follow_on_shop": false
           }
         }
       },
       "block_order": [
+        "company",
         "links",
         "legal",
         "newsletter"
